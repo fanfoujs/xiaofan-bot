@@ -25,15 +25,8 @@ const ff = new Fanfou({
   oauth_token_secret: oauthTokenSecret
 })
 
-const getSourceName = (status) => {
-  const match = status.source.match(/<a href=".+" target="_blank">(.+)<\/a>/)
-  if (match) return match[1]
-  return status.source
-}
-
 streamer.on('message.mention', data => {
-  const source = getSourceName(data.object)
-  if (source === '小饭' && data.object.text.match(/^@小饭师傅 我成为了分发者。$/)) {
+  if (data.object.text.match(/^@小饭师傅 我成为了分发者。$/)) {
     ff.post('/statuses/update', {
       status: `通知：@${data.object.user.name} 成为了分发者。`,
       repost_status_id: data.object.id
