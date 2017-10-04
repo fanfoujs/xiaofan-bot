@@ -1,0 +1,26 @@
+{
+  "name": "xiaofan-bot",
+  "version": "1.0.0",
+  "description": "Repost bot for Xiaofan",
+  "main": "app.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanfoujs/xiaofan-bot.git"
+  },
+  "author": "LitoMore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fanfoujs/xiaofan-bot/issues"
+  },
+  "homepage": "https://github.com/fanfoujs/xiaofan-bot#readme",
+  "devDependencies": {
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "fanfou-sdk": "^2.3.1",
+    "fanfou-streamer": "^0.2.0"
+  }
+}
