@@ -10,20 +10,15 @@ const {
   OAUTH_TOKEN_SECRET: oauthTokenSecret
 } = require('./config')
 
-const streamer = new Streamer({
+const options = {
   consumerKey,
   consumerSecret,
   oauthToken,
   oauthTokenSecret
-})
+}
 
-const ff = new Fanfou({
-  auth_type: 'oauth',
-  consumer_key: consumerKey,
-  consumer_secret: consumerSecret,
-  oauth_token: oauthToken,
-  oauth_token_secret: oauthTokenSecret
-})
+const streamer = new Streamer(options)
+const ff = new Fanfou(options)
 
 streamer.on('message.mention', data => {
   if (data.object.text.match(/^@小饭师傅 我成为了分发者。$/)) {
