@@ -23,7 +23,7 @@ Launch bot
 $ node app.js
 ```
 
-Or lauch with [pm2](https://github.com/Unitech/pm2)
+Or launch with [pm2](https://github.com/Unitech/pm2)
 
 ```bash
 $ pm2 start app.js
