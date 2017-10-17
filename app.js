@@ -26,7 +26,7 @@ streamer.on('message.mention', data => {
       status: `通知：@${data.object.user.name} 成为了分发者。`,
       repost_status_id: data.object.id
     }, (err, res) => {
-      if (err) console.log(err)
+      if (err) console.log(data.object.user.name, `(${data.object.user.id})`, err.message)
     })
   }
 })
