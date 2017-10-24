@@ -17,10 +17,26 @@
   },
   "homepage": "https://github.com/fanfoujs/xiaofan-bot#readme",
   "devDependencies": {
-    "standard": "^10.0.3"
+    "xo": "^0.18.2"
   },
   "dependencies": {
     "fanfou-sdk": "^2.5.0",
     "fanfou-streamer": "^0.2.0"
+  },
+  "xo": {
+    "rules": {
+      "camelcase": [
+        "error",
+        {
+          "properties": "never"
+        }
+      ],
+      "space-before-function-paren": [
+        "error",
+        "always"
+      ]
+    },
+    "semicolon": false,
+    "space": 2
   }
 }
